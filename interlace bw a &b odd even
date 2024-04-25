@@ -1,0 +1,58 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int eve,odd;
+        if(b%2==0)
+        {
+            eve=b;
+        }
+        else{
+            eve=b-1;
+        }
+         if(a%2!=0)
+        {
+            odd=a;
+        }
+        else{
+            odd=a+1;
+        }
+        int printed=0;
+        int total=b-a+1;
+        while(printed<total)
+        {
+            if(a%2==0&&b%2==0)
+            {
+                if(eve>=a)
+                { System.out.print(eve+" ");
+                printed++;
+                eve=eve-2;
+                
+                    
+                }
+                if(odd<=b){
+                    System.out.print(odd+" ");
+                printed++;
+                odd=odd+2;
+                }
+            }
+            else{if(odd<=b){
+                    System.out.print(odd+" ");
+                printed++;
+                odd=odd+2;
+                }
+                
+                 if(eve>=a)
+                { System.out.print(eve+" ");
+                printed++;
+                eve=eve-2;
+                
+                    
+                }
+            }
+        }
+    }
+}
