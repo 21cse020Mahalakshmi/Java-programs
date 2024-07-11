@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int n = sc.nextInt();
+        
+        System.out.print(notation(n, num));
+    }
+
+    public static String notation(int n, int num) {
+        StringBuilder str = new StringBuilder();
+        int quot = num / n;
+        while (num > 0) {
+            quot = num / n;
+            int rem = num % n;
+            if(rem<10)
+            {
+                str.insert(0,rem);
+            }
+            else{
+                str.insert(0,(char)('A'+(rem-10)));
+            }
+            num = quot;
+        }
+        return str.toString();
+    }
+}
