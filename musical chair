@@ -1,0 +1,31 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		ArrayList<Integer> arr = new ArrayList<>();
+		int n = sc.nextInt();
+		for(int i=1;i<=n;i++)
+		{
+		    arr.add(i);
+		}
+	    Random rand = new Random();
+        
+        
+        while (arr.size() > 1) {
+            int index = rand.nextInt(arr.size());
+            arr.remove(index);
+        }
+		for(int i:arr)
+		{
+		    System.out.print(i);
+		}
+	}
+}
